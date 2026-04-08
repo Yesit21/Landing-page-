@@ -11,9 +11,16 @@ export default function Bestsellers() {
   ];
 
   return (
-    <section className="py-[64px] bg-[#fff7f7]">
+    <section className="bg-[#F5E6D3]" style={{ paddingTop: '64px', paddingBottom: '64px' }}>
       <div className="container mx-auto">
-        <h2 className="text-[24px] font-bold text-[#374151] mb-[24px]">
+        <h2 
+          className="font-bold text-[#374151]"
+          style={{ 
+            fontSize: '24px',
+            marginBottom: '24px',
+            letterSpacing: '-0.5px'
+          }}
+        >
           Bestsellers from Across the Country
         </h2>
 

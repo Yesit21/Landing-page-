@@ -3,14 +3,16 @@
 export default function Hero() {
   return (
     <section 
-      className="relative overflow-hidden py-[64px]"
+      className="relative overflow-hidden"
       style={{
-        background: 'linear-gradient(90deg, #f87171 0%, #b91c1c 100%)'
+        background: 'linear-gradient(90deg, #C85A5A 0%, #A84444 50%, #8B3535 100%)',
+        paddingTop: '64px',
+        paddingBottom: '64px'
       }}
     >
-      {/* Círculos decorativos */}
+      {/* Círculos decorativos difuminados - opacity: 0.1, blur: 80px */}
       <div className="absolute inset-0 pointer-events-none">
-        {/* Círculo 1 */}
+        {/* Círculo 1 - top: -80px, left: -80px, 300x300 */}
         <div 
           className="absolute rounded-full"
           style={{
@@ -18,12 +20,12 @@ export default function Hero() {
             height: '300px',
             top: '-80px',
             left: '-80px',
-            background: '#f87171',
+            background: '#ffffff',
             opacity: 0.1,
             filter: 'blur(80px)'
           }}
         ></div>
-        {/* Círculo 2 */}
+        {/* Círculo 2 - bottom: -60px, right: -60px, 250x250 */}
         <div 
           className="absolute rounded-full"
           style={{
@@ -31,7 +33,7 @@ export default function Hero() {
             height: '250px',
             bottom: '-60px',
             right: '-60px',
-            background: '#b91c1c',
+            background: '#ffffff',
             opacity: 0.1,
             filter: 'blur(80px)'
           }}
@@ -39,35 +41,46 @@ export default function Hero() {
       </div>
 
       <div className="container mx-auto relative z-10">
-        <div className="grid grid-cols-1 md:grid-cols-2 gap-[40px] items-center">
+        {/* Layout - gap: 40px */}
+        <div 
+          className="flex items-center justify-between"
+          style={{ gap: '40px' }}
+        >
           
-          {/* Imagen principal */}
-          <div className="flex justify-center md:justify-start">
-            {/* Contenedor blanco con padding: 12px, sombra */}
+          {/* Imagen principal - 280x280, padding: 12px, sombra */}
+          <div className="flex-shrink-0">
             <div 
-              className="rounded-full bg-white"
+              className="bg-white rounded-full flex items-center justify-center"
               style={{
+                width: '280px',
+                height: '280px',
                 padding: '12px',
                 boxShadow: '0 10px 25px rgba(0,0,0,0.1)'
               }}
             >
-              {/* Imagen 280x280 */}
-              <div className="w-[280px] h-[280px] rounded-full overflow-hidden bg-gradient-to-br from-[#b91c1c] to-[#991b1b] flex items-center justify-center">
-                <span className="text-white text-6xl">🎂</span>
+              <div 
+                className="rounded-full overflow-hidden bg-gradient-to-br from-[#8B3535] to-[#6B2828] flex items-center justify-center"
+                style={{
+                  width: '100%',
+                  height: '100%'
+                }}
+              >
+                <span style={{ fontSize: '80px' }}>🎂</span>
               </div>
             </div>
           </div>
 
-          {/* Texto bloque (derecha) */}
-          <div className="text-center md:text-left">
-            {/* Título - margin-top: 0, font-size: 48px, line-height: 1.1, letter-spacing: -0.5px */}
+          {/* Texto central - flex-1 */}
+          <div className="flex-1 text-center">
+            {/* Título - 48px, line-height: 1.1, letter-spacing: -0.5px */}
             <h1 
-              className="text-white font-bold mb-0"
+              className="text-white font-bold"
               style={{
                 fontSize: '48px',
                 lineHeight: '1.1',
                 letterSpacing: '-0.5px',
-                marginTop: 0
+                marginTop: '0',
+                marginBottom: '16px'
               }}
             >
               DECADENT<br/>
@@ -75,63 +88,100 @@ export default function Hero() {
               BLISS!
             </h1>
             
-            {/* Subtexto - margin-top: 16px, font-size: 18px */}
+            {/* Subtexto - 18px, margin-top: 16px */}
             <p 
-              className="text-white"
+              className="text-white font-medium"
               style={{
+                fontSize: '18px',
                 marginTop: '16px',
-                fontSize: '18px'
+                marginBottom: '24px'
               }}
             >
               Satisfy Your Sweet Cravings
             </p>
             
-            {/* Badge - margin-top: 24px, padding: 8px 20px */}
+            {/* Badge - padding: 8px 20px, border-radius: 999px */}
             <div 
-              className="inline-block bg-white rounded-[999px]"
+              className="inline-block"
               style={{
-                marginTop: '24px',
-                padding: '8px 20px'
+                marginTop: '24px'
               }}
             >
-              <p className="text-[#b91c1c] text-[18px] font-bold">SAVE 20%</p>
-            </div>
-
-            {/* Mini imágenes - margin-top: 32px, gap: 16px */}
-            <div 
-              className="flex justify-center md:justify-start"
-              style={{
-                marginTop: '32px',
-                gap: '16px'
-              }}
-            >
-              {/* Cada imagen: 80x80, border: 4px solid #fff */}
               <div 
-                className="rounded-full bg-white"
+                className="rounded-full"
                 style={{
-                  width: '80px',
-                  height: '80px',
-                  border: '4px solid #fff',
-                  padding: '4px'
+                  padding: '8px 20px',
+                  background: '#6B2828',
+                  borderRadius: '999px'
                 }}
               >
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-[#f87171] to-[#b91c1c] flex items-center justify-center">
-                  <span className="text-white text-2xl">🍰</span>
-                </div>
+                <p 
+                  className="text-white font-semibold"
+                  style={{ 
+                    fontSize: '11px',
+                    marginBottom: '2px'
+                  }}
+                >
+                  Special Offer
+                </p>
+                <p 
+                  className="font-bold"
+                  style={{ 
+                    fontSize: '24px',
+                    color: '#FFD700',
+                    margin: 0
+                  }}
+                >
+                  SAVE 20%
+                </p>
               </div>
-              
+            </div>
+          </div>
+
+          {/* Imágenes secundarias - 80x80, gap: 16px, border: 4px white */}
+          <div 
+            className="flex-shrink-0 flex flex-col"
+            style={{ 
+              gap: '16px',
+              marginTop: '32px'
+            }}
+          >
+            <div 
+              className="bg-white rounded-full flex items-center justify-center"
+              style={{
+                width: '80px',
+                height: '80px',
+                border: '4px solid #fff',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+              }}
+            >
               <div 
-                className="rounded-full bg-white"
+                className="rounded-full overflow-hidden bg-gradient-to-br from-[#8B3535] to-[#6B2828] flex items-center justify-center"
                 style={{
-                  width: '80px',
-                  height: '80px',
-                  border: '4px solid #fff',
-                  padding: '4px'
+                  width: '100%',
+                  height: '100%'
                 }}
               >
-                <div className="w-full h-full rounded-full bg-gradient-to-br from-[#f87171] to-[#b91c1c] flex items-center justify-center">
-                  <span className="text-white text-2xl">🧁</span>
-                </div>
+                <span style={{ fontSize: '32px' }}>🍰</span>
+              </div>
+            </div>
+            <div 
+              className="bg-white rounded-full flex items-center justify-center"
+              style={{
+                width: '80px',
+                height: '80px',
+                border: '4px solid #fff',
+                boxShadow: '0 4px 12px rgba(0,0,0,0.1)'
+              }}
+            >
+              <div 
+                className="rounded-full overflow-hidden bg-gradient-to-br from-[#8B3535] to-[#6B2828] flex items-center justify-center"
+                style={{
+                  width: '100%',
+                  height: '100%'
+                }}
+              >
+                <span style={{ fontSize: '32px' }}>🧁</span>
               </div>
             </div>
           </div>

@@ -2,7 +2,18 @@
 
 export default function Footer() {
   return (
-    <footer className="bg-[#b91c1c] text-white">
+    <footer className="bg-[#8B3535] text-white">
+      {/* Banner superior FSSAI */}
+      <div 
+        className="bg-[#8B3535] text-white text-center"
+        style={{ 
+          padding: '16px 24px',
+          fontSize: '14px'
+        }}
+      >
+        <p>FSSAI Lic. No. 12345678901234</p>
+      </div>
+
       {/* Contenedor - padding: 48px 24px */}
       <div 
         className="container mx-auto"
@@ -15,35 +26,67 @@ export default function Footer() {
         >
           
           <div>
-            <h4 className="font-bold mb-[16px] text-[16px]">Dakingo</h4>
-            <ul className="space-y-[8px] text-[14px]">
-              <li><a href="#" className="hover:underline">Our Story</a></li>
-              <li><a href="#" className="hover:underline">Contact Us</a></li>
-              <li><a href="#" className="hover:underline">Franchise</a></li>
+            <h4 
+              className="font-bold text-white"
+              style={{ 
+                fontSize: '16px',
+                marginBottom: '16px'
+              }}
+            >
+              Dakingo
+            </h4>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <li><a href="#" className="hover:underline" style={{ fontSize: '14px' }}>Our Story</a></li>
+              <li><a href="#" className="hover:underline" style={{ fontSize: '14px' }}>Contact Us</a></li>
+              <li><a href="#" className="hover:underline" style={{ fontSize: '14px' }}>Franchise</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-[16px] text-[16px]">Know Us</h4>
-            <ul className="space-y-[8px] text-[14px]">
-              <li><a href="#" className="hover:underline">About Us</a></li>
-              <li><a href="#" className="hover:underline">Contact</a></li>
+            <h4 
+              className="font-bold text-white"
+              style={{ 
+                fontSize: '16px',
+                marginBottom: '16px'
+              }}
+            >
+              Know Us
+            </h4>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <li><a href="#" className="hover:underline" style={{ fontSize: '14px' }}>About Us</a></li>
+              <li><a href="#" className="hover:underline" style={{ fontSize: '14px' }}>Contact</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-[16px] text-[16px]">Need Help?</h4>
-            <ul className="space-y-[8px] text-[14px]">
-              <li><a href="#" className="hover:underline">Cancellation</a></li>
-              <li><a href="#" className="hover:underline">Privacy Policy</a></li>
+            <h4 
+              className="font-bold text-white"
+              style={{ 
+                fontSize: '16px',
+                marginBottom: '16px'
+              }}
+            >
+              Need Help?
+            </h4>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <li><a href="#" className="hover:underline" style={{ fontSize: '14px' }}>Cancellation</a></li>
+              <li><a href="#" className="hover:underline" style={{ fontSize: '14px' }}>Privacy Policy</a></li>
             </ul>
           </div>
 
           <div>
-            <h4 className="font-bold mb-[16px] text-[16px]">More Info</h4>
-            <ul className="space-y-[8px] text-[14px]">
-              <li><a href="#" className="hover:underline">Terms</a></li>
-              <li><a href="#" className="hover:underline">Reviews</a></li>
+            <h4 
+              className="font-bold text-white"
+              style={{ 
+                fontSize: '16px',
+                marginBottom: '16px'
+              }}
+            >
+              More Info
+            </h4>
+            <ul style={{ display: 'flex', flexDirection: 'column', gap: '8px' }}>
+              <li><a href="#" className="hover:underline" style={{ fontSize: '14px' }}>Terms</a></li>
+              <li><a href="#" className="hover:underline" style={{ fontSize: '14px' }}>Reviews</a></li>
             </ul>
           </div>
 
@@ -77,9 +120,15 @@ export default function Footer() {
         </div>
       </div>
 
-      {/* Copyright - fondo claro, texto gris */}
-      <div className="bg-[#fff7f7] py-[16px]">
-        <p className="text-center text-[14px] text-[#374151]">
+      {/* Copyright - fondo: cream, texto: gris */}
+      <div 
+        className="bg-[#FFF5F5]"
+        style={{ padding: '16px 0' }}
+      >
+        <p 
+          className="text-center text-[#374151]"
+          style={{ fontSize: '14px' }}
+        >
           © 2024 Dakingo. All rights reserved.
         </p>
       </div>

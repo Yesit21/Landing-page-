@@ -9,19 +9,26 @@ export default function OurPromise() {
   ];
 
   return (
-    <section className="py-[64px]">
+    <section className="bg-[#FFF5F5]" style={{ paddingTop: '64px', paddingBottom: '64px' }}>
       <div className="container mx-auto">
         <h2 
-          className="text-[24px] font-bold text-[#374151] text-center"
-          style={{ marginBottom: '40px' }}
+          className="font-bold text-[#374151] text-center"
+          style={{ 
+            fontSize: '24px',
+            marginBottom: '40px',
+            letterSpacing: '-0.5px'
+          }}
         >
           Our Promise
         </h2>
 
-        {/* Contenedor - display: flex, justify-content: space-between */}
+        {/* Contenedor - display: flex, justify-content: space-between, margin-top: 40px */}
         <div 
           className="flex max-w-4xl mx-auto"
-          style={{ justifyContent: 'space-between' }}
+          style={{ 
+            justifyContent: 'space-between',
+            marginTop: '40px'
+          }}
         >
           {promises.map((item, idx) => (
             <div 
@@ -29,7 +36,7 @@ export default function OurPromise() {
               className="flex flex-col items-center text-center"
               style={{ width: '25%' }}
             >
-              {/* Icono - 40x40, margin-bottom: 12px, color: #b91c1c */}
+              {/* Icono - width: 40px, height: 40px, margin-bottom: 12px */}
               <div 
                 className="flex items-center justify-center"
                 style={{
@@ -42,7 +49,11 @@ export default function OurPromise() {
               >
                 {item.icon}
               </div>
-              <p className="text-[12px] font-bold text-[#374151] leading-tight">
+              {/* Texto - 14px */}
+              <p 
+                className="font-bold text-[#374151] leading-tight"
+                style={{ fontSize: '14px' }}
+              >
                 {item.title}<br/>{item.subtitle}
               </p>
             </div>
