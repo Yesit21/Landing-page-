@@ -1,44 +1,57 @@
 @import "tailwindcss";
 
 :root {
-  /* Dakingo Brand Colors - Exact from image */
-  --primary: #8B3A3A;           /* Burgundy/Maroon - Logo, buttons */
-  --primary-dark: #6B2828;      /* Darker burgundy - Hover states */
-  --secondary: #F5E6D3;         /* Light beige/cream - Top bar background */
-  --accent: #C62828;            /* Bright red - CTA buttons, badges */
-  --background: #FAFAFA;        /* Off-white - Page background */
-  --text-dark: #4A2C2A;         /* Dark brown - Primary text */
-  --text-light: #6B5B5A;        /* Medium brown - Secondary text */
-  --white: #FFFFFF;             /* Pure white - Cards, sections */
-  --border-light: #E0E0E0;      /* Light gray - Borders */
-  --search-button: #C62828;     /* Red for search button */
+  /* Colores exactos */
+  --primary-red: #b91c1c;
+  --primary-red-light: #f87171;
+  --background: #fff7f7;
+  --text-gray: #374151;
+  --border-gray: #e5e7eb;
+  --icon-gray: #9ca3af;
+  --star-yellow: #facc15;
+  --white: #ffffff;
+  --promo-bg: #fff1f2;
 }
 
 @theme inline {
-  /* Dakingo Custom Theme */
-  --color-primary: var(--primary);
-  --color-primary-dark: var(--primary-dark);
-  --color-secondary: var(--secondary);
-  --color-accent: var(--accent);
+  --color-primary-red: var(--primary-red);
+  --color-primary-red-light: var(--primary-red-light);
   --color-background: var(--background);
-  --color-text-dark: var(--text-dark);
-  --color-text-light: var(--text-light);
+  --color-text-gray: var(--text-gray);
+  --color-border-gray: var(--border-gray);
+  --color-icon-gray: var(--icon-gray);
+  --color-star-yellow: var(--star-yellow);
   --color-white: var(--white);
-  --color-border-light: var(--border-light);
-  --color-search-button: var(--search-button);
+  --color-promo-bg: var(--promo-bg);
   
-  /* Typography */
   --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
-}
-
-body {
-  background: var(--background);
-  color: var(--text-dark);
-  font-family: var(--font-sans);
-  margin: 0;
-  padding: 0;
 }
 
 * {
   box-sizing: border-box;
+  margin: 0;
+  padding: 0;
+}
+
+body {
+  background: var(--background);
+  color: var(--text-gray);
+  font-family: var(--font-sans);
+}
+
+/* Grid base 8px */
+.container {
+  max-width: 1280px;
+  margin: 0 auto;
+  padding: 0 24px;
+}
+
+/* Espaciado estándar */
+.section-spacing {
+  padding-top: 64px;
+  padding-bottom: 64px;
+}
+
+.gap-standard {
+  gap: 24px;
 }
