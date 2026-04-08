@@ -1,5 +1,7 @@
 "use client";
 
+import { Clock, Truck, Users, ChefHat } from "lucide-react";
+
 export default function OurPromise() {
   return (
     <section className="bg-white" style={{ padding: '35px 0' }}>
@@ -13,25 +15,25 @@ export default function OurPromise() {
             <div className="grid grid-cols-4" style={{ gap: '10px' }}>
               <div className="flex flex-col items-center">
                 <div className="border-2 rounded-full flex items-center justify-center" style={{ width: '48px', height: '48px', borderColor: '#8B3535', marginBottom: '5px' }}>
-                  <span style={{ fontSize: '22px' }}>⏰</span>
+                  <Clock style={{ width: '22px', height: '22px', color: '#8B3535', strokeWidth: 2 }} />
                 </div>
                 <p className="text-center font-bold" style={{ fontSize: '8px', color: '#8B3535', lineHeight: '1.2' }}>ON TIME<br/>DELIVERY</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="border-2 rounded-full flex items-center justify-center" style={{ width: '48px', height: '48px', borderColor: '#8B3535', marginBottom: '5px' }}>
-                  <span style={{ fontSize: '22px' }}>🚚</span>
+                  <Truck style={{ width: '22px', height: '22px', color: '#8B3535', strokeWidth: 2 }} />
                 </div>
                 <p className="text-center font-bold" style={{ fontSize: '8px', color: '#8B3535', lineHeight: '1.2' }}>5000+<br/>DESIGNS</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="border-2 rounded-full flex items-center justify-center" style={{ width: '48px', height: '48px', borderColor: '#8B3535', marginBottom: '5px' }}>
-                  <span style={{ fontSize: '22px' }}>👥</span>
+                  <Users style={{ width: '22px', height: '22px', color: '#8B3535', strokeWidth: 2 }} />
                 </div>
                 <p className="text-center font-bold" style={{ fontSize: '8px', color: '#8B3535', lineHeight: '1.2' }}>2 CR<br/>ORDERS</p>
               </div>
               <div className="flex flex-col items-center">
                 <div className="border-2 rounded-full flex items-center justify-center" style={{ width: '48px', height: '48px', borderColor: '#8B3535', marginBottom: '5px' }}>
-                  <span style={{ fontSize: '22px' }}>🎂</span>
+                  <ChefHat style={{ width: '22px', height: '22px', color: '#8B3535', strokeWidth: 2 }} />
                 </div>
                 <p className="text-center font-bold" style={{ fontSize: '8px', color: '#8B3535', lineHeight: '1.2' }}>BAKED<br/>FRESH</p>
               </div>
@@ -39,16 +41,16 @@ export default function OurPromise() {
           </div>
           
           <div className="grid grid-cols-2 grid-rows-3" style={{ gap: '6px' }}>
-            <div className="rounded-lg overflow-hidden" style={{ height: '90px', background: 'linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%)' }}>
+            <div className="rounded-lg overflow-hidden shadow-sm" style={{ height: '90px', background: 'linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%)' }}>
               <div className="w-full h-full flex items-center justify-center" style={{ fontSize: '40px' }}>🎂</div>
             </div>
-            <div className="rounded-lg overflow-hidden row-span-2" style={{ background: 'linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%)' }}>
+            <div className="rounded-lg overflow-hidden row-span-2 shadow-sm" style={{ background: 'linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%)' }}>
               <div className="w-full h-full flex items-center justify-center" style={{ fontSize: '50px' }}>👨‍🍳</div>
             </div>
-            <div className="rounded-lg overflow-hidden row-span-2" style={{ background: 'linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%)' }}>
+            <div className="rounded-lg overflow-hidden row-span-2 shadow-sm" style={{ background: 'linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%)' }}>
               <div className="w-full h-full flex items-center justify-center" style={{ fontSize: '50px' }}>🍰</div>
             </div>
-            <div className="rounded-lg overflow-hidden" style={{ height: '90px', background: 'linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%)' }}>
+            <div className="rounded-lg overflow-hidden shadow-sm" style={{ height: '90px', background: 'linear-gradient(135deg, #F5E6D3 0%, #E8D5C0 100%)' }}>
               <div className="w-full h-full flex items-center justify-center" style={{ fontSize: '40px' }}>👥</div>
             </div>
           </div>
