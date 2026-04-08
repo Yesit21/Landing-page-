@@ -1,26 +1,44 @@
 @import "tailwindcss";
 
 :root {
-  --background: #ffffff;
-  --foreground: #171717;
+  /* Dakingo Brand Colors - Exact from image */
+  --primary: #8B3A3A;           /* Burgundy/Maroon - Logo, buttons */
+  --primary-dark: #6B2828;      /* Darker burgundy - Hover states */
+  --secondary: #F5E6D3;         /* Light beige/cream - Top bar background */
+  --accent: #C62828;            /* Bright red - CTA buttons, badges */
+  --background: #FAFAFA;        /* Off-white - Page background */
+  --text-dark: #4A2C2A;         /* Dark brown - Primary text */
+  --text-light: #6B5B5A;        /* Medium brown - Secondary text */
+  --white: #FFFFFF;             /* Pure white - Cards, sections */
+  --border-light: #E0E0E0;      /* Light gray - Borders */
+  --search-button: #C62828;     /* Red for search button */
 }
 
 @theme inline {
+  /* Dakingo Custom Theme */
+  --color-primary: var(--primary);
+  --color-primary-dark: var(--primary-dark);
+  --color-secondary: var(--secondary);
+  --color-accent: var(--accent);
   --color-background: var(--background);
-  --color-foreground: var(--foreground);
-  --font-sans: var(--font-geist-sans);
-  --font-mono: var(--font-geist-mono);
-}
-
-@media (prefers-color-scheme: dark) {
-  :root {
-    --background: #0a0a0a;
-    --foreground: #ededed;
-  }
+  --color-text-dark: var(--text-dark);
+  --color-text-light: var(--text-light);
+  --color-white: var(--white);
+  --color-border-light: var(--border-light);
+  --color-search-button: var(--search-button);
+  
+  /* Typography */
+  --font-sans: system-ui, -apple-system, BlinkMacSystemFont, 'Segoe UI', Roboto, 'Helvetica Neue', Arial, sans-serif;
 }
 
 body {
   background: var(--background);
-  color: var(--foreground);
-  font-family: Arial, Helvetica, sans-serif;
+  color: var(--text-dark);
+  font-family: var(--font-sans);
+  margin: 0;
+  padding: 0;
+}
+
+* {
+  box-sizing: border-box;
 }
