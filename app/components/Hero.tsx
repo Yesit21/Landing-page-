@@ -15,10 +15,9 @@ export default function Hero() {
           {/* Left side - Main cake image in white circle */}
           <div className="flex-shrink-0">
             <div className="w-[280px] h-[280px] bg-white rounded-full p-4 shadow-2xl">
-              <div className="w-full h-full rounded-full overflow-hidden bg-[#F5F5F5] flex items-center justify-center">
-                {/* Placeholder for main cake image */}
-                <div className="text-[#999999] text-center text-sm">
-                  Main Cake<br/>Image
+              <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-[#8B3535] to-[#6B2828] flex items-center justify-center">
+                <div className="text-white text-center text-sm font-bold">
+                  🎂<br/>CAKE
                 </div>
               </div>
             </div>
@@ -45,16 +44,16 @@ export default function Hero() {
           {/* Right side - Two smaller cake images in white circles */}
           <div className="flex-shrink-0 flex flex-col gap-6">
             <div className="w-[140px] h-[140px] bg-white rounded-full p-3 shadow-xl">
-              <div className="w-full h-full rounded-full overflow-hidden bg-[#F5F5F5] flex items-center justify-center">
-                <div className="text-[#999999] text-center text-xs">
-                  Cake 2
+              <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-[#A84444] to-[#8B3535] flex items-center justify-center">
+                <div className="text-white text-center text-xs font-bold">
+                  🍰
                 </div>
               </div>
             </div>
             <div className="w-[140px] h-[140px] bg-white rounded-full p-3 shadow-xl">
-              <div className="w-full h-full rounded-full overflow-hidden bg-[#F5F5F5] flex items-center justify-center">
-                <div className="text-[#999999] text-center text-xs">
-                  Cake 3
+              <div className="w-full h-full rounded-full overflow-hidden bg-gradient-to-br from-[#A84444] to-[#8B3535] flex items-center justify-center">
+                <div className="text-white text-center text-xs font-bold">
+                  🧁
                 </div>
               </div>
             </div>

@@ -55,10 +55,9 @@ export default function Bestsellers() {
             >
               {/* Product Image */}
               <div className="relative mb-4">
-                <div className="w-full aspect-square bg-[#F5F5F5] rounded-[12px] overflow-hidden flex items-center justify-center">
-                  {/* Placeholder for product image */}
-                  <div className="text-[#999999] text-center text-sm">
-                    Cake<br/>Image
+                <div className="w-full aspect-square bg-gradient-to-br from-[#8B3535] to-[#6B2828] rounded-[12px] overflow-hidden flex items-center justify-center">
+                  <div className="text-white text-center text-4xl">
+                    🎂
                   </div>
                 </div>
                 
