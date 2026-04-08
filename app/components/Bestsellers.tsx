@@ -11,102 +11,32 @@ export default function Bestsellers() {
   ];
 
   return (
-    <section className="bg-[#F5E6D3]" style={{ paddingTop: '64px', paddingBottom: '64px' }}>
+    <section className="bg-white" style={{ padding: '40px 0' }}>
       <div className="container mx-auto">
-        <h2 
-          className="font-bold text-[#374151]"
-          style={{ 
-            fontSize: '24px',
-            marginBottom: '24px',
-            letterSpacing: '-0.5px'
-          }}
-        >
-          Bestsellers from Across the Country
-        </h2>
+        <h2 className="font-bold" style={{ fontSize: '22px', color: '#8B3535', marginBottom: '20px' }}>Bestsellers from Across the Country</h2>
 
-        {/* Grid - gap: 24px, margin-top: 24px */}
-        <div 
-          className="grid grid-cols-1 sm:grid-cols-2 md:grid-cols-4"
-          style={{
-            gap: '24px',
-            marginTop: '24px'
-          }}
-        >
+        <div className="grid grid-cols-4" style={{ gap: '16px' }}>
           {products.map((product, idx) => (
-            <div 
-              key={idx} 
-              className="bg-white rounded-[16px] relative"
-              style={{ padding: '16px' }}
-            >
-              {/* Imagen - height: 140px, margin-bottom: 12px */}
-              <div 
-                className="relative rounded-[12px] overflow-hidden bg-gradient-to-br from-[#b91c1c] to-[#991b1b] flex items-center justify-center"
-                style={{
-                  height: '140px',
-                  marginBottom: '12px'
-                }}
-              >
-                <span className="text-white text-5xl">🎂</span>
-                
-                {/* Corazón - position: absolute, top: 12px, right: 12px, 32x32 */}
-                <button 
-                  className="absolute bg-white rounded-full flex items-center justify-center hover:bg-[#fff7f7] transition-colors"
-                  style={{
-                    top: '12px',
-                    right: '12px',
-                    width: '32px',
-                    height: '32px'
-                  }}
-                >
-                  <Heart className="w-[16px] h-[16px] text-[#b91c1c]" strokeWidth={2} />
+            <div key={idx} className="bg-[#F5E6D3] rounded-lg relative" style={{ padding: '12px' }}>
+              <div className="relative rounded-lg overflow-hidden bg-gradient-to-br from-[#6B2828] to-[#8B3535] flex items-center justify-center" style={{ height: '120px', marginBottom: '10px' }}>
+                <span style={{ fontSize: '50px' }}>🎂</span>
+                <button className="absolute bg-white rounded-full flex items-center justify-center" style={{ top: '8px', right: '8px', width: '28px', height: '28px' }}>
+                  <Heart style={{ width: '14px', height: '14px', color: '#8B3535' }} strokeWidth={2} />
                 </button>
               </div>
-
-              {/* Nombre - margin-bottom: 4px */}
-              <h3 
-                className="text-[14px] font-semibold text-[#374151] line-clamp-2"
-                style={{ marginBottom: '4px' }}
-              >
-                {product.name}
-              </h3>
-
-              {/* Precio - margin-bottom: 4px, color: #b91c1c */}
-              <p 
-                className="text-[18px] font-bold"
-                style={{
-                  marginBottom: '4px',
-                  color: '#b91c1c'
-                }}
-              >
-                {product.price}
-              </p>
-
-              {/* Estrellas - tamaño: 16px, gap: 4px */}
-              <div 
-                className="flex"
-                style={{ gap: '4px' }}
-              >
+              <h3 style={{ fontSize: '12px', fontWeight: '600', color: '#333', marginBottom: '4px', lineHeight: '1.3' }}>{product.name}</h3>
+              <p className="font-bold" style={{ fontSize: '14px', color: '#8B3535', marginBottom: '4px' }}>{product.price}</p>
+              <div className="flex" style={{ gap: '2px' }}>
                 {[...Array(5)].map((_, i) => (
-                  <span 
-                    key={i}
-                    style={{
-                      fontSize: '16px',
-                      color: i < product.rating ? '#facc15' : '#e5e7eb'
-                    }}
-                  >
-                    {i < product.rating ? '★' : '☆'}
-                  </span>
+                  <span key={i} style={{ fontSize: '12px', color: i < product.rating ? '#FFD700' : '#ddd' }}>★</span>
                 ))}
               </div>
             </div>
           ))}
         </div>
 
-        {/* Botón VIEW ALL */}
-        <div className="flex justify-end mt-[24px]">
-          <button className="bg-[#b91c1c] hover:bg-[#991b1b] text-white px-[16px] py-[8px] rounded-[999px] text-[14px] font-medium transition-colors">
-            VIEW ALL
-          </button>
+        <div className="flex justify-end" style={{ marginTop: '16px' }}>
+          <button className="text-white font-bold rounded-full" style={{ padding: '8px 20px', background: '#8B3535', fontSize: '12px' }}>VIEW ALL</button>
         </div>
       </div>
     </section>
